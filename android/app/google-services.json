@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "437580923019",
+    "project_id": "flutbert-42bd7",
+    "storage_bucket": "flutbert-42bd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437580923019:android:0a6551c5f0188b9d8b148e",
+        "android_client_info": {
+          "package_name": "com.example.flutbert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437580923019-d43p6nfitq39t5nq0psl2tk6gjliudei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBPAr3iePYGT0CYm19W-slNSFl5gNgbPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437580923019-d43p6nfitq39t5nq0psl2tk6gjliudei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

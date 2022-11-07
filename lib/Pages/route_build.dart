@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-const routeHome = '/';
-const routeSettings = '/settings';
-const routePrefixDeviceSetup = '/setup/';
-const routeDeviceSetupStart = '/setup/$routeDeviceSetupStartPage';
+const routeHome = '/buildroute/';
+const routeSettings = '/buildroute/settings';
+const routePrefixDeviceSetup = '/buildroute/setup/';
+const routeDeviceSetupStart = '/buildroute/setup/$routeDeviceSetupStartPage';
 const routeDeviceSetupStartPage = 'find_devices';
 const routeDeviceSetupSelectDevicePage = 'select_device';
 const routeDeviceSetupConnectingPage = 'connecting';
@@ -25,8 +25,8 @@ void main() {
         late Widget page;
         debugPrint('Setting : {$settings}');
         if (settings.name == routeHome) {
+          debugPrint('0. Enter home Screen');
           page = const HomeScreen();
-          debugPrint(' ...... home Screen');
         } else if (settings.name == routeSettings) {
           page = const SettingsScreen();
           debugPrint(' ...... setting Screen');
@@ -365,6 +365,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('Home Screen entering ......');
     return Scaffold(
       appBar: _buildAppBar(context),
       body: Center(

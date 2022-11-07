@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutbert/tabular.dart';
 
 void main() {
   runApp(const MyShimmer());

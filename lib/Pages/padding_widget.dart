@@ -1,43 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:flutbert/tabular.dart';
 
 void main() {
   runApp(
       const MaterialApp(
-        home: MySizedBox(),
+        home: MyPadding(),
       )
   );
 }
 
-class MySizedBox extends StatefulWidget {
-  const MySizedBox({super.key});
+class MyPadding extends StatefulWidget {
+  const MyPadding({super.key});
 
   @override
-  State<MySizedBox> createState() => _MySizedBox();
+  State<MyPadding> createState() => _MyPadding();
 }
 
-class _MySizedBox extends State<MySizedBox>{
+class _MyPadding extends State<MyPadding>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
         appBar : AppBar(
-          title: const Text('Center SizedBox Sample'),
+          title: const Text('Padding Sample'),
         ),
-        body: const Center(
-          child: _SizedBox(),
+        body: const Padding(
+          //padding: EdgeInsets.symmetric(vertical: 60,horizontal: 50),
+          padding: EdgeInsets.fromLTRB(15, 15, 0, 20),
+          child: _ListView(),
         ));
-  }
-}
-
-class _SizedBox extends StatelessWidget{
-  const _SizedBox({super.key});
-  @override
-  Widget build(BuildContext context){
-    return const SizedBox(
-      width: 200,
-      height: 600,
-      child: _ListView(),
-    );
   }
 }
 
