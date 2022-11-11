@@ -48,7 +48,7 @@ import 'package:flutbert/Pages/webSockets.dart';
 import 'package:flutbert/Pages/file_read_write.dart';
 import 'package:flutbert/Pages/share_preference.dart';
 import 'package:flutbert/Pages/camera_take_photo.dart';
-
+import 'package:flutbert/Pages/dateTimePicker.dart';
 import 'package:firebase_core/firebase_core.dart';
 //import 'firebase_options.dart';
 
@@ -119,6 +119,12 @@ class _MyHomePage extends State<MyHomePage>{
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(decoration: BoxDecoration(color: Colors.blue),child: Text('Widget List'),) ,
+            ListTile(
+              leading: const Icon(Icons.video_call),
+              hoverColor: hoverOverColor,
+              title: const Text('Date Time Picker'),
+              onTap: () {Navigator.of(context).push(_createRoute2('DateTimePicker'));},
+            ),
             ListTile(
               leading: const Icon(Icons.video_call),
               hoverColor: hoverOverColor,
@@ -582,6 +588,11 @@ class _MyHomePage extends State<MyHomePage>{
         //TakePictureScreen(camera: widget.camera,),
       //);
     //}
+    else if(pageRoute=='DateTimePicker') {
+      return PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation) =>
+      const DateTimePicker(),
+      );
+    }
     else {
       return PageRouteBuilder(pageBuilder: (context, animation,
           secondaryAnimation) => const MyHomePage(),);
